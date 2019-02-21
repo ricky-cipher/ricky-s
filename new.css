@@ -1,0 +1,724 @@
+*
+{
+	
+	margin: 0;
+	padding: 0;
+}
+#main-body-container
+{
+	margin: 0;
+	
+	height: auto;
+	width: 100%;
+	
+}
+
+
+
+//#inner-box
+{
+	display: block;
+}
+
+
+.home-box 
+	{
+		height: 100vh;
+		width: 100%;
+		background: url(../images/585648426-black-texture-wallpaper.jpg);
+		margin: 0px;
+		padding: 0;
+		overflow: hidden;
+		transition: 2s;
+	}
+	nav
+	{
+		height: 60px;
+		width: 100vw;
+		background: rgba(0,0,0,0.7);
+		z-index: 100;
+		visibility: hidden;
+		
+		transition: 1s ease;
+	}
+	nav.sticky
+	{
+		position: fixed;
+		visibility: visible;
+		border-bottom: 5px solid #444;
+		transition: 0.5s ease;
+		
+	}
+	nav .menu-box
+	{
+		
+		height: 50px;
+		width: auto;
+		z-index: 100;
+		justify-content: flex-end;
+	}
+	
+	nav .menu-box ul 
+	{
+		display: flex;
+		height: inherit;
+		width: inherit;
+		list-style: none;
+		float: right;
+	}
+	nav .menu-box ul li 
+	
+	{
+		height: 40px;
+	}
+	nav .menu-box ul li:hover 
+	{
+		border-bottom: 7px solid darkorange;
+		border-radius: 5px;
+		transition: .5s;
+	}
+	nav .menu-box ul li, nav .menu-box ul li a 
+	{
+		font-family: arial;
+		font-size: 1.24em;
+		color: #999;
+		margin: 17px;
+		text-decoration: none;
+		
+	}
+	nav .menu-box ul li a:hover, nav .menu-box ul li a:focus
+	{
+		color: #f4f4f4;
+		border-spacing: 2em;
+	}
+	nav.sticky:hover
+	{
+		border-bottom: 4px solid orange;
+	}
+	
+	.arrow, .arrow a 
+	{
+		font-size: 70px;
+		color: white;
+		text-align: center;
+		position: relative;
+		text-decoration: none;
+		animation: bounce 1s infinite;
+		
+		
+	}
+	@keyframes bounce
+	{
+		0%{top:0px;}
+		50%{top: 16px; color: orange;}
+		100%{top: 0px;}
+	}
+	.home-page
+	{
+		margin-top: 9%;
+	}
+	.home-page img
+	{
+		height: 200px;
+		width: 200px;
+		margin-left: 42%;
+		border: 1px solid #222;
+		border-radius: 50%;
+	}
+	.home-page p
+	{
+		color: #f4f4f4;
+		line-height: 45px;
+		font-family: georgia;
+		text-align: center;
+		font-size: 2em;
+	}
+	.home-page p span
+	{
+		color: orange;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.about-box
+	{
+		height: 670px;
+		width: 100%;
+		background: url(../images/eng-web.png);
+		background-size: cover;
+		background-position: top;
+		margin: 0px;
+		padding: 0;
+		overflow: hidden;
+	}
+	.about-box #inner-box
+	{
+		display: flex;
+	}
+	.about-box #inner-box .left
+	{
+		width: 50vw;
+		height: 670px;
+		background: rgba(0,0,0,0.5);
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+	.about-box #inner-box .left img
+	{
+		height: 550px;
+		width: auto;
+		z-index: 10;
+		position: relative;
+		margin-left: -200px;
+		margin-top: 130px;
+		opacity: .6;
+	}
+	.about-box #inner-box .right
+	{
+		width: 50%;
+		height: 670px;
+		background: rgba(0,0,0,0.9);
+		margin: 0;
+		padding: 0;
+		
+	}
+	.about-box #inner-box .right p 
+	{
+		font-family: georgia;
+		font-size: 3em;
+		color: white;
+		padding: 27%;
+	}
+	.about-box #inner-box .right p span 
+	{
+		color: darkorange;
+	}
+	.about-box #inner-box .right button
+	{
+		height: 50px;
+		width: 250px;
+		margin-top: 25%;
+		border: transparent;
+		font-family: time new roman;
+		color: black;
+		font-weight: bold;
+		text-align: center;
+		font-size: .5em;
+		background: rgba(650,250,3,0.7);
+		cursor: pointer;
+		
+	}
+	.about-box #inner-box .right button a 
+	{
+		text-decoration: none;
+		color: inherit;
+	}
+	.about-box #inner-box .right button:hover
+	{
+		background: rgba(550,300,3,0.5);
+	}
+	.team
+	{
+		width: 100%;
+		height: 600px;
+		background: url(../images/fantasy-2543658_960_720.jpg);
+		background-position: top;
+		background-size: cover;
+		display: none;
+	}
+	.team.show-team
+	{
+		
+		display: block;
+	}
+	.team .inner-team
+	{
+		height: 100%;
+		width: 100%;
+		background: rgba(0,0,0,0.8);
+	}
+	.team .inner-team table
+	{
+		height: 100%;
+		width: 100%;
+		border: 2px solid #888;
+		border-collapse: collapse;
+		text-align: center;
+		color: #f4f4f4;
+	}
+	.team .inner-team table .flo 
+	{
+		width: 50%;
+	}
+	.team .inner-team table .flo img 
+	{
+		height: 150px;
+		width: 150px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+	
+	}
+	.team .inner-team table .flo p 
+	{
+		font-size: 1.3em;
+		
+	}
+	.team .inner-team table .flo p span
+	{
+		 color: cyan;
+	}
+	.team .inner-team table .caroo 
+	{
+		width: 50%;
+	}
+	.team .inner-team table .caroo img 
+	{
+		height: 150px;
+		width: 150px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+	
+	}
+	.team .inner-team table .caroo p 
+	{
+		font-size: 1.3em;
+		
+	}
+	.team .inner-team table .caroo p span
+	{
+		 color: cyan;
+	}
+	
+	
+	.team .inner-team table .collo 
+	{
+		width: 25%;
+	}
+	.team .inner-team table .collo img 
+	{
+		height: 150px;
+		width: 150px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+	
+	}
+	.team .inner-team table .collo p 
+	{
+		font-size: 1.3em;
+		
+	}
+	.team .inner-team table .collo p span
+	{
+		 color: cyan;
+	}
+	
+	
+	
+	.team .inner-team table .anto 
+	{
+		width: 25%;
+	}
+	.team .inner-team table .anto img 
+	{
+		height: 150px;
+		width: 150px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+	
+	}
+	.team .inner-team table .anto p 
+	{
+		font-size: 1.3em;
+		
+	}
+	.team .inner-team table .anto p span
+	{
+		 color: cyan;
+	}
+	
+	
+	
+	.team .inner-team table .derrick 
+	{
+		width: 25%;
+	}
+	.team .inner-team table .derrick img 
+	{
+		height: 150px;
+		width: 150px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+	
+	}
+	.team .inner-team table .derrick p 
+	{
+		font-size: 1.3em;
+		
+	}
+	.team .inner-team table .derrick p span
+	{
+		 color: cyan;
+	}
+	
+	
+	.team .inner-team table .plus1 
+	{
+		width: 25%;
+	}
+	.team .inner-team table .plus1 img 
+	{
+		height: 150px;
+		width: 150px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+	
+	}
+	.team .inner-team table .plus1 p 
+	{
+		font-size: 1.3em;
+		
+	}
+	.team .inner-team table .plus1 p span
+	{
+		 color: cyan;
+	}
+	.team .inner-team table td:hover
+	{
+		background: rgba(220,170,0,0.4);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.gallery-box
+	{
+		height: 670px;
+		width: 100vw;
+		margin:0;
+		padding: 0;
+		background: rgba(0,0,0,0.3);
+		overflow: hidden;
+		display: flex;
+	}
+	.gallery-box #inner-box ul 
+	{
+		list-style: none;
+		display: flex;
+		margin: 10%;
+		
+		
+	}
+	.gallery-box #inner-box ul li 
+	{
+		margin: 17px;
+		width: 250px;
+		
+	}
+	.gallery-box #inner-box ul li img 
+	{
+		height: 250px;
+		width: 250px;
+		display: flex;
+		border: .5px solid #111;
+		border-radius: 10px;
+		box-shadow: 0px 2px 6px 6px rgba(0,0,0,0.5);
+	}
+	.gallery-box #inner-box ul li img:hover
+	{
+		box-shadow:  0px 2px 6px 6px rgba(222,200,7,0.8);
+		height: 240px;
+		width: 240px;
+		transition: .1s;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.contact-box
+	{
+		height:500px;
+		width: 100vw;
+		background: url(../images/enerji.gif);
+		background-position: bottom;
+		background-size: cover;
+		margin:0;
+		padding: 0;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		
+	}
+	.contact-box #inner-box .contact-form
+	{
+		height: 300px;
+		width: 400px;
+		margin-top: 15%;
+		background: rgba(0,0,0,0.5);
+		position: relative;
+		justify-content: center;
+		
+		border-radius: 5px;
+		animation: blink 1s infinite;
+		
+	
+	}
+	@keyframes blink
+	{
+		0%
+		{
+			box-shadow: 0px 2px 5px 2px rgba(900,900,900,0.7);
+		}
+		50%
+		{
+			box-shadow: none;
+		}
+		100%
+		{
+			box-shadow: 0px 2px 5px 2px rgba(900,900,900,0.7);
+		}
+	}
+	
+	.contact-box #inner-box .contact-form form label
+	{
+		color: orange;
+		line-height: 20px;
+		margin-left: 15%;
+		
+	}
+	.contact-box #inner-box .contact-form form input
+	{
+		height: 30px;
+		width: 200px;
+		border: none;
+		border-radius: 10px;
+		margin-left: 15%;
+		color: white;
+		background: rgba(0,0,0,0.6);
+	}
+	.contact-box #inner-box .contact-form form textarea
+	{
+		width: 250px;
+		height: 110px;
+		margin-left: 15%;
+		color: white;
+		background: rgba(0,0,0,0.6);
+		padding: 5px;
+		border: none;
+		font-family: georgia;
+	}
+	
+	.contact-box #inner-box .contact-form form .button
+	{
+		background: #e0711a;
+		border-color: transparent;
+		border-radius: 0px;
+		color: black;
+		font-weight: bold;
+		font-size: .9em;
+		margin-top: 5%;
+		margin-left: 20%;
+	}
+	.contact-box #inner-box .contact-form form .button:hover
+	{
+		background: #fe9004;
+		font-weight: none;
+		box-shadow: 0px 0px 3px 5px rgba(0,0,0,0.6);
+	}
+
+
+.social-icons 
+{
+	height: 60vh;
+	width: 7%;
+	background: rgba(0,0,0,0.3);
+	float: left;
+	position: fixed;
+	z-index: 1000;
+	border: none;
+	animation: blinker 1s infinite;
+	margin-top: 10%;
+}
+@keyframes blinker
+{
+	0%
+	{
+		border-top: 2px solid #0d19a3;
+		border-right: 2px solid #0677a1;
+		border-bottom: 2px solid #9a1750;
+		
+	}
+	25%
+	{
+		//color: #0677a1;
+		border-top: 2px solid #182628;
+		border-right: 2px solid #9a1750;
+		border-bottom: 2px solid 0d19a3;
+	}
+	50%
+	{
+		//color: #9a1750;
+		border-top: 2px solid #9a1750;
+		border-right: 2px solid #4285f4;
+		border-bottom: 2px solid #182628;
+	}
+	75%
+	{
+		//color: #182628;
+		border-top: 2px solid #0677a1;
+		border-right: 2px solid #0d19a3;
+		border-bottom: 2px solid #9a1750;
+	}
+	100%
+	{
+		//color: #4285f4;
+		border-top: 2px solid  #4285f4;
+		border-right: 2px solid #0677a1;
+		border-bottom: 2px solid #182628;
+	}
+}
+.social-icons ul 
+{
+	list-style: none;
+	display: block;
+	padding: 5px;
+	margin: 0;
+	
+}
+.social-icons ul li 
+
+{
+	margin-top: 5%;
+	padding: 0;
+	text-align: center;
+	font-size: 3.3em;
+	color: #888;
+	border-bottom: 1px solid #555;
+	//background: linear-gradient(45deg, blue, cyan, forestgreen, green, darkgreen);
+	animation: change 12s infinite ease;
+	line-height: 1.159em;
+	
+	
+}
+.social-icons ul li:last-child
+{
+	border: none;
+}
+@keyframes change
+{
+	0%
+	{
+		color: #0d19a3;
+	}
+	25%
+	{
+		color: #0677a1;
+	}
+	50%
+	{
+		color: #9a1750;
+	}
+	75%
+	{
+		color: #182628;
+	}
+	100%
+	{
+		color: #4285f4;
+	}
+}
+
+
+footer
+{
+	height: 50px;
+	width: 100%;
+	background: rgba(0,0,0,0.999);
+	text-align: center;
+	color: gray;
+	margin-top: -5px;
+	
+}
+footer p
+{
+	padding: 14px;
+	font-size: 1em;
+}
+footer p span
+{
+	color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
