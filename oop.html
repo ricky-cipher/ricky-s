@@ -1,0 +1,1035 @@
+<html>
+<head>
+	<title> OOP crash course </title>
+	<h1 class="h1"><u><b><marquee direction="left" style="background:rgba(0,0,0,0.7)"> <span class="lookLeft"> < </span>OOP CRASH COURSE <em>With Ricky</em> <span class="lookRight"> ></span> </span></marquee></b></u></h1>
+	<hr>
+	
+	<script>
+	function showintro()
+	{
+		var intr = document.getElementById('introSec');
+		intr.style.display = 'block';
+	}
+	function hideintro()
+	{
+		var introo = document.getElementById('introSec');
+		introo.style.display = 'none';
+	}
+	function showHTML()
+	{
+		var ht = document.getElementById('htmlSec');
+		ht.style.display = 'block';
+	}
+	function hideHTML()
+	{
+		var ht = document.getElementById('htmlSec');
+		ht.style.display = 'none';
+	}
+	function showjs()
+	{
+		var j = document.getElementById('javaSec');
+		j.style.display = 'block';
+	}
+	function hidejs()
+	{
+		var j = document.getElementById('javaSec');
+		j.style.display = 'none';
+	}
+	function showht()
+	{
+		var ht = document.getElementById('htjs');
+		ht.style.display = 'block';
+	}
+	function hideht()
+	{
+		var ht = document.getElementById('htjs');
+		ht.style.display = 'none';
+	}
+	function showcobj()
+	{
+		var cobj = document.getElementById('cObj');
+		cobj.style.display = 'block';
+	}
+	function hidecobj()
+	{
+		var cobj = document.getElementById('cObj');
+		cobj.style.display = 'none';
+	}
+	function showquizes()
+	{
+		var q = document.getElementById('quizes');
+		q.style.display = 'block';
+	}
+	function hidequizes()
+	{
+		var q = document.getElementById('quizes');
+		q.style.display = 'none';
+	}
+	function showall()
+	{
+		var a = document.getElementById('cObj');
+		var b = document.getElementById('introSec');
+		var c = document.getElementById('htjs');
+		var d = document.getElementById('javaSec');
+		var e = document.getElementById('htmlSec');
+		var f = document.getElementById('domTree');
+		var g = document.getElementById('quizes');
+		var btn = document.getElementById('btnshow');
+		var btn1 = document.getElementById('btnhide');
+		
+		
+		a.style.display = 'block';
+		b.style.display = 'block';
+		c.style.display = 'block';
+		d.style.display = 'block';
+		e.style.display = 'block';
+		f.style.display = 'block';
+		g.style.display = 'block';
+		btn.style.display = 'none';
+		btn1.style.display = 'block';
+		
+	}
+	function hideall()
+	{
+		var a = document.getElementById('cObj');
+		var b = document.getElementById('introSec');
+		var c = document.getElementById('htjs');
+		var d = document.getElementById('javaSec');
+		var e = document.getElementById('htmlSec');
+		var f = document.getElementById('domTree');
+		var g = document.getElementById('quizes');
+		var btn = document.getElementById('btnshow');
+		var btn1 = document.getElementById('btnhide');
+		
+		a.style.display = 'none';
+		b.style.display = 'none';
+		c.style.display = 'none';
+		d.style.display = 'none';
+		e.style.display = 'none';
+		f.style.display = 'none';
+		g.style.display = 'none';
+		btn.style.display = 'block';
+		btn1.style.display = 'none';
+		
+	}
+	
+	
+	
+	
+	
+	function array1()
+	{
+		var div = document.getElementById('arrCode');
+		div.style.display = 'block';
+		
+	}
+	function testArr1()
+	
+	{
+		var sp = document.getElementById('sp');
+		var students = new Array('John', 'Anne', 'David', 'Mary', 'Joseph', 'Jane');
+		for(var x = 0; x< students.length; x++)
+		{
+			sp.innerHTML += students[x] + '<br/>' ;
+		}
+	}
+	function aaa()
+	{
+		var div = document.getElementById('aaa');
+		div.style.display = 'block';
+		var person = { name: "John", age: 27, gender: "Male"};
+		for(x in person)
+		{
+			div.innerHTML += person[x] + '<br/>';
+		}
+	}
+	function currentArray()
+	{
+		var drinks =  ["tea", "coffee", "beer", "soda"];
+		alert(drinks.toString());
+	}
+	function popped()
+	{
+			var drinks =  ["tea", "coffee", "beer", "soda"];
+			var div = document.getElementById('popDiv');
+			div.innerHTML = drinks.pop();
+	}
+	function addDrink()
+	{
+		var drinks =  ["tea", "coffee", "beer", "soda"];
+		var drink = document.getElementById('newItem').value;
+		drinks.push(drink);
+		alert('You have added a new item, '+ drink + ' The array is: '+ drinks.toString());
+	}
+	function shft()
+	{
+		var drinks =  ["tea", "coffee", "beer", "soda"];
+		drinks.shift();
+		alert('you have shifted the array, the new array is: '+ drinks.toString());
+	}
+	function unshft()
+	{
+		var drinks =  ["tea", "coffee", "beer", "soda"];
+		drinks.unshift('coke');
+		alert('you have un shifted the array, the new array is: '+ drinks.toString());
+	}
+	function alertIt()
+	{
+		var store = document.getElementById('al').value;
+		alert(store);
+	
+	}
+	function showdomtree()
+	{
+		var dom = document.getElementById('domTree');
+		dom.style.display = 'block';
+	}
+	function hidedomtree()
+	{
+		var dom = document.getElementById('domTree');
+		dom.style.display = 'none';
+	}
+	
+		class student{
+			constructor() {
+				this.studentName;
+				this.marks = [ ];
+			}
+		}
+		let stud = new student();
+		function nameFun() {
+			var name = document.getElementById('sName');
+			stud.studentName = name.value;
+		}
+		function submitMarks(){
+			var subj1 = document.getElementById('sub1').value;
+			var subj2 = document.getElementById('sub2').value;
+			stud.marks.push(subj1);
+			stud.marks.push(subj2);
+		}
+		function show() {
+			var sp = document.getElementById('sp1');
+			var allMarks = stud.marks.toString();
+			var n = stud.studentName;
+			sp.innerHTML = n + ' ' + allMarks;
+		}
+		function showCalc()
+		{
+			var spann= document.getElementById('calc');
+			var spa= document.getElementById('calcCode');
+			spann.style.display = 'block';
+			spa.style.display = 'block';
+		}
+		function calcEval()
+		{
+			var f = document.getElementById('first').value;
+			var s = document.getElementById('second').value;
+			var pr = prompt('Choose charcter: + , - , * , /');
+			if(pr == '+')
+			{
+				var result = Number(f) + Number(s);
+				alert('The result is: ' + result);
+			}
+			else if(pr == '-')
+			{
+				var result = Number(f) - Number(s);
+				alert('The result is: ' + result);
+			}
+			else if(pr == '*')
+			{
+				var result = Number(f) * Number(s);
+				alert('The result is: ' + result);
+			}
+			else if(pr == '/')
+			{
+				var result = Number(f) / Number(s);
+				alert('The result is: ' + result);
+			}
+		}
+		function loginshow()
+		{
+			var span = document.getElementById('showform');
+			span.style.display= 'block';
+		}
+		function submitDets()
+		{
+			var user = document.getElementById('user').value;
+			var pwd = document.getElementById('pwd').value;
+			
+			if(user == 'user' && pwd == 123)
+			{
+				alert('successful login');
+			}
+			else{
+				alert('incorrect details');
+			}
+		}
+		function getDay()
+		{
+			var days = ["Sunday", "Monday" , "Tuesday", "Wednesday" , "Thursday", "Friday", "Saturday"];
+			var day = new Date().getDay();
+			alert(days[day]);
+
+
+		}
+		function getMonth()
+		{
+			var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			var mth = new Date().getMonth();
+			alert(month[mth]);
+
+
+		}
+	function loadFun()
+	{
+		alert('Hi there, Thankyou and welcome to my crash course program on OOP. I just wanted to notify you that all the buttons and inputs work perfectly fine, and feel free to try the programs in your computer. Have fun with the code... \n Ricky Mathenge');
+	}
+	
+	
+	
+	
+	
+	
+	</script>
+	<style>
+		body
+		{
+			background:rgba(0,0,0,0.3);
+		}
+		footer
+		{
+			background: rgba(0,0,0,0.9);
+			color: white;
+			text-align: center;
+			padding: 5px;
+			font-size: 1em;
+			display: flex
+			
+		}
+		footer span 
+		{
+			float: right;
+			margin-left: 50%;
+		}
+		.h1
+		{
+			text-shadow: 3px 4px 2px #888;
+			
+		}
+		.lookLeft, .lookRight
+		{
+			//text-shadow: 3px 4px 2px white;
+			animation: 1s ease infinite chan;
+		}
+		@keyframes chan 
+		{
+			0%{color: white; text-shadow: 3px 4px 2px black;}
+			50%{color: black; text-shadow: 3px 4px 2px white;}
+			100%{color: white; text-shadow: 3px 4px 2px black;}
+		}
+	blockquote
+	{
+		color: blue;
+	}
+	#example1
+	{
+		background: rgba(0,0,0,0.85);
+		color: #999;
+	}
+	h3
+	{
+		cursor: pointer;
+	}
+	#intro, #hd1, #hd2, #hd3, #hd4, #hd5, #hd6
+	{
+		text-align: center;
+		font-size: 1.8em;
+		padding: 15px;
+		margin:0;
+		animation: 3s ease infinite bod ;
+	}
+	#intro:hover, #hd1:hover, #hd2:hover, #hd3:hover, #hd4:hover, #hd5:hover ,#hd6:hover
+	{
+		background: #222;
+		color: orange;
+	}
+	@keyframes bod {
+	0%
+	{
+		border:2px solid #111;
+	}
+	20%
+	{
+		border: 2px solid #444;
+	}
+	40%
+	{
+		border:2px solid #888;
+	}
+	60%
+	{
+		border:2px solid #555;
+	}
+	80%
+	{
+		border:2px solid #333;
+	}
+	100%
+	{
+		border:2px solid #111;
+	}
+	}
+	#btnshow, #btnhide
+	{
+		border-radius: 10px;
+		background: rgba(0,0,0,0.7);
+		font-size: 1.4em;
+		color: orange;
+		margin-left: 50px;
+	}
+	#btnhide
+	{
+		display: none;
+	}
+	.bt1, .bt2, .bt3, .bt4, .bt5, .bt6
+	{
+		font-size: 1.5em;
+		font-weight: bold;
+		color: red;
+		background: #f2f2f2;
+		display: flex;
+		float: center;
+		border-radius: 5px;
+		text-transform: capitalize;
+		border: none;
+		margin-bottom: 30px;
+		
+	}
+	.bt1:hover, .bt2:hover, .bt3:hover, .bt4:hover, .bt5:hover, .bt6:hover
+	{
+		background: red;
+		color:white;
+	}
+	#arrow, #arrow1, #arrow2, #arrow3, #arrow4, #arrow5, #arrow6
+	{
+		color: red;
+		margin-left: 5px;
+		margin-right: 10px;
+		animation: 1s ease infinite bounce;
+		
+	}
+	@keyframes bounce
+	{
+		0%
+		{
+			margin-top: -9px;
+		}
+		50%{ margin-top: 0px;}
+		100% { margin-top: -9px;}
+	}
+	
+	</style>
+</head>
+<body Onload="loadFun()">
+<p align="center"><button onclick="showall()" id="btnshow">Expand All</button>&nbsp;<button Onclick="hideall()" id="btnhide">Hide All</button>
+	</p><h3 id="intro" Onclick="showintro()">Introduction</h3> 
+<section id="introSec" style="display: none;">
+	
+	<p> <b>Object Oriented programming </b> is a programming paradign based on the cocncept of objects, which contain data, in the form of fields, and code in the form of procedures. <br/> A feature of objects is an object's procedures that can access and often modify the data fields of the object with which they are associated. <br/> A programming language model in which programs are organized around data or objects, rather than functions and logic.</p>
+	<p>In order to understand how Object Oriented Programming works, in this case, we will use two langauages:- </p>
+	<ul>
+		<li>HTML</li>
+		<li>JavaScript</li>
+	</ul>
+	<br/>	
+	<button Onclick="hideintro()" class="bt1" >Hide&nbsp; <span id="arrow"> &uarr; </span> </button>
+</section>
+
+	<h3 Onclick="showHTML()" id="hd1"><b>HTML</b></h3>
+
+<section id="htmlSec" style="display:none;">	
+	<p>HTML is an abbreviation to <em>HyperText Markup Language</em>. HTML is a language that is mostly used for markup. <br/> <b>Markup- </b>  is a set of notations for annonating plain text of a documentto give structural information of the content of the document pr instructionson how the content is being displayed.</p>
+	<p>HTML is normally used to create web pages. Each and every piece of content contained in a webpage is enclosed in betwwen HTML code.</p>
+	<br/>
+	<h5><u>The HTML code</u></h5>
+	<p>HTML is made of elements. An HTML <em>element</em> is an individual component of HTML doucment(a document represents the whole web page). HTML is composed of nodes. The nodes may include <b>text nodes</b>(elements that store text data, the most common one is the paragraph element: &lt;p&gt;).
+		Other nodes include, image, video, table etc...
+	</p>
+	<p>A HTML element consistd of three components: an opening tag, content(what is contained in between the tags) and a closing tag. There are 3 types of HTML elements: </p>
+	<ol>
+		<li>A normal element</li>
+		<li>A nested element</li>
+		<li>An empty element</li>
+	</ol>
+	<h5>1. a normal element</h5>
+	<p> This type of element has 2 tags; <em>i.e</em> an opening tag(&lt; &gt;) and a closing tag(&lt;/&gt;). <br/>
+	a good example of this element is the HTML element(&lt;html&gt; &lt;/html&gt;)</p>
+	<h5>2. a nested element</h5>
+	<p>Nested means contained in another. A nested element is wholly contained in another element. </p>
+	<p>An instance of these elements in use are the text formatting elements used inside tha paragraph element to format parts of the texts. they include; emphasize(&lt;em&gt; &lt;/em&gt;), bold(&lt;b&gt; &lt;/b&gt;), italics(&lt;i&gt; &lt;/i&gt;) etc.</p>
+	<p><i>eg.</i> &lt;p&gt; This is a &lt;b&gt;crash course&lt;/b&gt;&lt;/p&gt; displays: This is a <b>crash course</b></p>
+	
+	<h5>an empty element</h5>
+	<p>An empty element has no content. An example of an empty element is the line break element, &lt;br /&gt;</p>
+	<br/>
+	<p>HTML eleemts may contains extra information. This information is called Atrributes. <em> an attribute is extra information about an element</em></p>
+	<p>syntax for an attribute: <b> attribute name="attribute value" </b></p>
+	<p>To assign an attribute to an element, the attribute is placed in the opening tag: <br/> <em>eg. </em> &lt;p align="center"&gt; content &lt;/p&gt;</p>
+	<h4>Element identifiers</h4>
+	<p>Element identification is very important in programming. <em> this is like labelling a sample for easy identification.</em></p>
+	<p>There are 2 ways of giving identity to an element:</p>
+	<ol>
+		<li>Class</li>
+			<p><em>ie.</em> &lt;p class="para1"&gt;</p>
+		<li>Id</li>
+			<p><em>ie.</em> &lt;span id="span1"&gt;</p>
+	</ol>
+	<h4>Basic HTML</h4>
+	<p>Like we saw from the above texts, every web page content is written in between the opening HTML tag(&lt;html&gt;) and the closing HTML tag(&lt;/html&gt;) </p>
+	<p>The web page contains two major parts; the head and the body. The head is where document titles, page headers and links to external files. </p>
+	<p>An example of a HTML	code of a webpage;</p>
+	<p style="background: black; color: white;"> &lt;html&gt; <br/> &lt; head&gt; <br/> &nbsp; &lt;title&gt; Test Page&lt;/title&gt; <br/> &nbsp; &lt;h1&gt; A Web Page &lt;/h1&gt; <br/> &lt;/head&gt; <br/> &lt;body&gt; <br/> &nbsp; &lt;p id="para1" &gt; This is &lt;b&gt;paragraph 1&lt;/b&gt;&lt;/p&gt; <br/> &nbsp; &lt;span class="span1"&gt; Span is also a &lt;em&gt;text node&lt;/em&gt; &lt;/span&gt; <br/> &lt;/body&gt; <br/> &lt;/html&gt;</p>
+	<p> The above code will display:</p>
+	<p> <h1>A Web Page</h1> This is <b>paragraph 1</b><br/> <span>Span is also a <em>text node</em></span></p>
+	<br/>
+	<h4>HTML inputs</h4>
+	<p>HTML inputs are elements that prompt the user to give the program data.</p>
+	<p> They include:</p>
+	<ol>
+		<li>Text inputs</li>
+		<input type="text" />		
+		<p>syntax: &lt;input type="text" id="name" /&gt;</p>
+
+		<li>Number Inputs</li>
+		<input type="number" />
+		<p>syntax: &lt;input type="number" id="num" /&gt;</p>	
+		<li>Button/ Submit</li>
+		<input type="button" value="Click Here" id="btn" />
+		<p>syntax: &lt;input type="button" id="btn" value="Click Here" /&gt;</p>		
+		<li>Radio</li>
+		<input type="radio" id="rdButton" />
+		<p>syntax: &lt;input type="radio" id="rdButton" /&gt;</p>	
+		<li>checkbox</li>
+		<input type="checkbox" id="check" checked="checked" />
+		<p>syntax: &lt;input type="checkbox" id="check" /&gt;</p>
+		
+		<li>TextArea</li>
+		<textarea cols="20" rows="5"></textarea>
+		<p> syntax: &lt;textarea rows="5" cols="20" &gt;&lt;/textarea&gt;</p>
+	
+	</ol>
+		
+		<h4> HTML select</h4>
+		<p>HTML select is an input element that allows the user to include a number of options to choose from. The front-end of the select is a button with a dropdown arrow to a number of option to choose from. <br/> <em>ie.</em></p>
+		<select>
+			<option>HTML</option>
+			<option>Java</option>
+			<option>JavaScript</option>
+			<option>CSS</option>
+		</select>
+	<p> Syntax: <br/> &lt;select&gt; <br/> &nbsp; &nbsp; &lt;option&gt; HTML &lt;/option&gt; <br/> &nbsp; &nbsp; &lt;option&gt; Java &lt;/option&gt;<br/> &nbsp; &nbsp; &lt;option&gt; JavaScript &lt;/option&gt;<br/> &nbsp; &nbsp; &lt;option&gt; CSS &lt;/option&gt; <br/> &lt;/select&gt;</p>
+	
+	<h4>HTML lists</h4>
+	<p>there are two types of lists in HTML. </p>
+		<ul style="list-style: none;">
+			<li><u>1. Ordered lists (ol)</u></li>
+			<p>Ordered list are lists that are arranged in order <em>ie. in numbers, roman numbers, letters</em></p>
+			<p>syntax:<br/> <blockquote>&lt;ol&gt;<br/><blockquote> &lt;li&gt;item 1&lt;/li&gt; <br/>&lt;li&gt;item 2&lt;/li&gt;</blockquote>&lt;/ol&gt;</blockquote></p>
+			<p>output: <br/> <ol>
+				<li>item 1</li>
+				<li>item 2</li>
+				</ol></p>
+			<li><u>2. Undered lists (ul)</u></li>
+			
+		</ul>
+		<p>unordered lists are denoted by the use of bullets.</p>
+		<p>syntax:<br/> <blockquote>&lt;ul&gt;<br/><blockquote> &lt;li&gt;item 1&lt;/li&gt; <br/>&lt;li&gt;item 2&lt;/li&gt;</blockquote>&lt;/ul&gt;</blockquote></p>
+			<p>output: <br/> <ul>
+				<li>item 1</li>
+				<li>item 2</li>
+			</ul></p>
+			<button Onclick="hideHTML()"  class="bt2">Hide &nbsp;<span id="arrow1"> &uarr; </span></button>
+	
+</section>	
+		
+	
+		<!--			---------******---------				-->
+	<h3  Onclick="showjs()" id="hd2"><b>JavaScript</b></h3>
+<section id="javaSec" style="display: none;">	
+	
+	
+	<p>JavaScript(JS) is a scripting language used alongside HTML and makes web pages interactive and dynmaic. It also has a prototype-based object orientation.</p>
+	<h4>JavaScript Variables</h4>
+	<p> a variable is a memory portion a program assigns a computer to store data. <br/> In javascript, to declare a variable;-<br/> code: var a = 1; </p>
+	<h4>javascript functions</h4>
+		<p> A function is a group of statemnets that perform a certain task. javascriptfunctions are defined with the key word "function" followed by the function name and parenthesis. <br/> <em>ie.</em> <span style="background: rgba(0,0,0,0.2)">function myFunction()</span></p>
+	<h4>Pop up boxes</h4>
+	<p><h5>alerts</h5> In Js, alert boxes are used to warn users or to pass a message to users before proceeding to the next action. Alert boxes pop up when an event is triggered. <em>for instance, when a button is clicked, an alert pops up to display a message. </em> <b> Note that an alert box only gives a warnig or a message, it does not hinder the program running.</b></p>
+	<label>Lets assume we want to display, "crash course" on our document; <br/> <em>ie.</em></label>
+	<blockquote> alert('crash course');</blockquote>
+	<span> let's try that;</span>
+	<br/>
+	<label> Enter something you want to alert:<label><input id="al" type="text" />
+	<button Onclick="alertIt()">Alert</button>
+	<h5>prompts</h5>
+	<p>Prompt boxes require the user to enter something. It could be text or a number. Just like alert boxes pop up when an event is triggered. the same way propmt boxes appear when an event it triggered.</p>
+	<span><em>We can have a prompt asking for you age; </em></span>
+	<blockquote> prompt('Enter your age');</blockquote>
+	<button Onclick="prompt('Enter your age')">Let's try</button>
+	<h5>Confirm Boxes</h5>
+	<p>This pop up box is oftenly used when the programs requires the user to verify or accept something. These boxes will either require the user to click "OK" (returns <b>true</b>) or "Cancel" (returns <b>false</b>).</p>
+	<span><em>ie. </em></span>
+	<blockquote> confirm('Do you want to coninue');</blockquote>
+	<button Onclick="confirm('Do you want to continue?')">Let's Try</button>
+	
+	<h4><u>Output methods</u></h4>
+	<p>In Js, the are various methods used to display outputs from the program.</p>
+	<p><b>Alert Outputs</b> as we learnt earlier, are very commonly used. the message displayed in the alert boxes is an outout of the program.</p>
+	<p><b>document.write()</b> is an inbuilt method that displays program's output by writing on the document/web page. <blockquote> document.write('display this text'); </blockquote></p>
+	<p><b>Console.log()</b> is also an output method that displays output in the computer's console application. <blockquote> console.log('this is an output'); </blockquote></p>
+	
+	
+	
+	<h4>JavaScript operators</h4>
+	<p>The basic javascript opertors include:-</p>
+	<h5><i>arithmetic: </i></h5>
+	<p>+, -, *, / and %</p>
+	<h5><i>assignment: </i></h5>
+	<p> = </p>
+	
+	<h5><i>Relational: </i></h5>
+	<p> < &nbsp; less than</p>
+	<p> > &nbsp; greater than</p>
+	<p> <= &nbsp; less than or equal to</p>
+	<p> >= &nbsp; greater than or equal to</p>
+	<p> == &nbsp; equal to</p>
+	<p> != &nbsp; equal to</p>
+	<h5><i>logical: </i></h5>
+	<p> && &nbsp; 'And'</p>
+	<p> || &nbsp; 'Or'</p>
+	<p> ! &nbsp; 'Not'</p>
+	
+	
+	<h4>javascript conditional statements and loops </h4>
+	<p>Just like any other programming language, JS too has loops and conditional statements.<br/> A conditional statement is a statement that allows a program to run only under a certain condition. </p>
+	<p>The <b>if</b> and <b>if...else</b> statements are used for conditions.</p>
+	<h5><i>if</i></h5>
+	<p>The if statement only sets a condition to a program; it either gives or doesn't give.</p>
+	<p><em>eg.</em> <br/><blockquote>var num1 = 20; <br/> if(num1 = 20) <br/> { <br/> &nbsp;&nbsp;alert('correct'); </blockquote> <br/> } </p>
+	<h5><i>if...else</i></h5>
+	<p>The if...else conditional statement gives a condition to a program; it gives an extra line of code if the statement executed is not true. <br/> <em>eg.</em></p>
+	<p><blockquote> var text = "java"; <br/> if(text == 'java') <br/>{ <br/> &nbsp;&nbsp; alert('the text is java'); <br/> } <br/> else <br> { <br/> &nbsp;&nbsp; alert('the text doesn't match'); <br/> }</blockquote> </p>
+	
+	<h4>JavaScript loops</h4>
+	<p>In here, we are going to look at one loop, the <b>for</b> loop then look at the <b> for...in</b> loop later in the arrays.</p>
+	<p>syntax: <em>for(iniatial value; condition ; increament/decreament){}</em></p>
+	<h4>JavaScript Arrays</h4>
+	<p>Arrays are statements that store data in form of elements. There are different ways of definig an array in javascript; </p>
+	<ol>
+		<li> <b><i> <blockquote> var arr = new Array(56, 45, 988, 37, 38);</blockquote>  </i></b> <br/> An array is declared and assigned 5 elements, and is stored in a variable 'arr'.</li>
+	<li><b><i><blockquote>  var arr = [ ];</blockquote> </i></b> <br/> Int this example, the array declared in empty, with no elements and is stored in a variable 'arr' </li>
+	</ol>
+	<p><i><b> *note the use of brackets in both cases. The first array with elements is deifined by rounded brackets while the empty array is defined by square brackets.</b></i></p>
+	<p> An array is made of elements, which is the data stored in them. Accessing this elements in the array, indexing of the elements is used, where the first element of the array acquires the index <b>'0'</b>, the second element acquires the index <b>'1'</b> and so forth.</p>
+	
+	<h4>Arrays and loops</h4>
+	<p>Just like in any other language, javascript allows accessing and editing arrays using loops.</p>
+	<p>For instance, you have an array, 'students' and you want to display the elements of that array; </p>
+	<p><b><blockquote> var students = new Array('John', 'Anne', 'David', 'Mary', 'Joseph', 'Jane');</blockquote> </b></p>
+	<button Onclick="array1()">view Code</button>
+	<div id="arrCode" style="display: none; background: black; color: gray;"><br/> <blockquote> 
+		for(var x = 0; x< students.length; x++)<br/>
+		{
+			<br/>&nbsp;&nbsp;&nbsp;document.write(students[x] + '&lt;br /&gt;');<br/>
+		}
+		<br/> 'x' in this case acts as the counter, which is first initialized to '0', which is the the index of the first element of the array.
+		</blockquote> </div>
+		<button Onclick="testArr1()"> Test Array</button><br/>
+		<span id="sp"></span>
+		
+		
+		<h4><i>The for... in loop</i></h4>
+		<p>In javascript, there are arrays that act as objects. Every object has a property and these properties have values.<br/> To Access these properties of an object, we shall use the <em>for...in </em> loop. <br/> <em>eg.</em> We have an object <b>person</b>; this person has got properties for instance, <b>name, age and gender</b></p>
+		<p>we can store this information in an array: <br/> <em>ie. </em> <b> var person = {name: "John" , Age: 27, gender: "Male"};</b></p>
+		<p><i>* note the way we used curly braces instead of square or rounded brackets. Each property is assigned a value with the use of a colon (<b>:</b>).</i></p>
+		<p>To access these propert values of the object; <br> Code: </p>
+		<span style="color:blue;">
+		for(x in students)<br/>
+		{<br/>
+		&nbsp;&nbsp;&nbsp;	document.write(students[x] + '&lt;br/&gt;'); <br/>}
+		</span><br/>
+		<button Onclick="aaa()">Try</button>
+		<div id="aaa" style="display: none;"></div>
+	<br/>
+	<h4>The JavaScript DOM</h4>
+	<p>The DOM is an abbreviation for Document object Model. As we saw earlier, the term document is represents the whole web page. Javascript like any other programming language allows the manipulation of the document. </p>
+	<h5>Array methods</h5>
+	<p><h4>1. converting arrays to strings (toString())</h4>Take an example of an array: <br/><b> var drinks = ["tea", "coffee", "beer", "soda"];</b><br> The <b>toString()</b> array method converts the array into one string/ 'sentence' separeted by commas(,). <br/> <em>ie.</em></p>
+	<p><blockquote style="color: blue;"> document.write(drinks.toString());</blockquote></p>
+	<h4>2. pop()</h4>
+	<p>The pop() method returns the value of the last element of the array. <br/> <em>Let's use our previous array.</em> We want to store the last value of the array in a  variable<b> popped</b></b> <em>ie.</em> <blockquote style="color: blue;"> var popped = drinks.pop();</blockquote></p>
+	<button Onclick="currentArray()">view current</button>
+	<button Onclick="popped()">Pop Value</button>
+	<div id="popDiv"> </div>
+	
+	<h4>3. Push()</h4>
+	<p>The push() method adds a new element to the array. The value added is placed as the last element of the array. <br/><em>Lets say we want to add an new drink(wine) in our array. <br/> ie.</em></p>
+	<blockquote style="color: blue;"> drinks.push('wine');</blockquote>
+	<p>Try it yourself</p>
+	<button Onclick="currentArray()">View the current Array</button><br/>
+	<label>Add a new item: </label><input type="text" id="newItem" placeholder="add a new drink..." />
+	<input type="submit" Onclick="addDrink()" value="Add" />
+	<h4> 4. shift()</h4>
+	<p>The shift() method removes the first element from the first indexes and pushes all the other elements to a lower index. <br> <em>if we want to shift the first element of our array, drinks, the first element, 'tea', will be removed from its first position and 'coffee' will be assigned the first index.</em></p>
+	<blockquote style="color: blue;"> drinks.shift();</blockquote>
+	<button Onclick="currentArray()">Current Array</button>
+	<button Onclick="shft()">shift</button>
+	<h4>5. unshift()</h4>
+	<p> Unlike, shift(), the unshift() method adds a new element at the begining of the array.<br/> <em>if we want a new element to our array; <br/> ie.</em></p>
+	<blockquote style="color: blue;"> drinks.unshift('coke');</blockquote>
+	<button Onclick="currentArray()">Current Array</button>
+	<button Onclick="unshft()">Unshift</button>
+	<h4>Array length method</h4>
+	<p>The length property returns the size of the array. It will return the number of elements in the array.</p>
+	<span><em>ie.</em> <blockquote style="color: blue;"> drinks.length;</blockquote> will give us the number of elements in the array.</span>
+	
+	<br/>
+	<h4>Javacript Time function</h4>
+	<p>JavaScript has an inbuit method that stores its date and time.<br/><em>ie.</em></p>
+	<blockquote> date();</blockquote>
+	<p><button onclick="alert(new Date())">Get Time</button></p>
+	<p>This method display the time, date and the time zone. but it can be simplified further using an inbuilt method; <blockquote>Date().toUTCString(); </blockquote> <button onclick="alert(new Date().toUTCString())">Get Simplified Time</button></p>
+	<p>Some may find it unnecessary to output the whole time and date. It can also be simplified in hours, minutes, date, month, year. <br/> there are various inbiult methods that perform this tasks <br/> <em>ie.</em></p>
+	<blockquote> var minute = new Date().getMinute();</blockquote>
+	<button onclick="alert(new Date().getMinutes())">Minutes</button>
+	
+	<blockquote> var hour = new Date().hours();</blockquote>
+	<button onclick="alert(new Date().getHours())">Hour</button>
+	
+	<blockquote> var sec = new Date().getSeconds();</blockquote>
+	<button onclick="alert(new Date().getSeconds())">Seconds</button>
+	
+	<blockquote> var day = new Date().getDay();</blockquote>
+	<button onclick="alert(new Date().getDay())">Day</button>
+	
+	<p>Notice that the 'getDay()' returns an integer. This is because days are stored as integers in javascript with 'sunday' as the first day hence the index '0'. To determine the day in string, we use an array that contains the days in string <br/><em>ie.</em></p>
+	<blockquote> var days = ["Sunday", "Monday" , "Tuesday", "Wednesday" , "Thursday", "Friday", "Saturday"];</blockquote>
+	<p> to access the array and get the correct date;</p>
+	<blockquote> var day = new Date().getDay(); <br/> alert(days[day]);</blockquote>
+	<p>this will give us: <button onclick="getDay()">Click To Get Day</button></p>
+	<p> the same way, we can get the current month. Let's try it out;</p>
+	<blockquote> var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; </blockquote>
+	<p>to access it and get the correct month;</p>
+	<blockquote> var mth = new Date().getMonth(); <br/> alert(month[mth]);</blockquote>
+	<p>this will give us: <button onclick="getMonth()">Get Month</button></p>
+	
+	
+	
+	<button onclick="hidejs()"  class="bt3">hide &nbsp;<span id="arrow2"> &uarr; </span></button>
+</section>	
+	<!--		-----***------		-->
+
+	<h3 onclick="showht()" id="hd3">HTML + Javacript</h3>
+<section id="htjs" style="display: none;">	
+	
+	<p>We can use JavaScript to manipulate HTML elements.</p>
+	<h4>Embedding JavaScript</h4>
+	<p>According to the position of the its code, Javascript is categoried in three categories; <br/></p>
+	<ol>
+		<li> Inline</li>
+			<p>inline Js is placed inside HTML elements as attributes. Inline Js only runs when an event triggers the element it is placed in. <br/><em>For instance we want to display and alert message, "the button has been clicked", when a button is clicked. <br/> ie.</em></p>
+			<blockquote> &lt;button Onclick="alert("the button has been clicked")"&gt; Click here &lt;/button&gt;</blockquote>
+			<p>an event must be specified as an attribute name that will determine the execution of the Js code. In our case the event is Click.</p>
+		<li> Internal</li>
+			<p>In HTML, internal Js is placed inside the in between script tags (&lt;script&gt;  &lt;/script&gt;). the code is then placed inside the head tags of HTML. <br/> <em>ie.</em></p>
+			<blockquote> &lt;head&gt; <blockquote>&lt;script&gt; <br/>&lt;/script&gt;</blockquote>&lt;/head&gt;</blockquote>
+			
+		
+		<li> External</li>
+		<p>External Js is code placed  in an external file, which is then linked with the parent HTML file. The link code is placed in between the head tags of HTML; <br/> <em>ie.</em></p>
+		<blockquote> &lt;head&gt; <blockquote>&lt;script src="java.js"&gt; &lt;/script&gt;</blockquote>&lt;/head&gt;</blockquote>
+		<p>in this case, we assume our external file containing JS code is saved, 'Java.js'. The term <b>'src'</b> is an attribute name for <u>source</u>.</p>
+		
+		
+		
+		
+	</ol>
+	
+	
+	<h4>storing Html elements using attributes</h4>
+	<p>Remember when we said that giving identity is important, in this part we will see its significance. JavaScript uses the 'class' and 'Id' to store the value of an element.<br/> To do this, we use javascript inbuilt method, <b>document.getElementById();</b> or <b>document.getElementByClassName()</b>.</p>
+	<p><em>let's assume we have an input element with and an Id of 'text1' <br/> ie.</em></p>
+	<blockquote> &lt;input type="text" id="text1" /&gt;</blockquote>
+	<span>To grab and store the value of this element in a javascript varaible, 'text', we use its attribute, id <br/> <em> ie.</em></span>
+	<blockquote> var text = document.getElementById('text1').value; </blockquote>
+	<p><b><i>*Note that document is the <u>object</u> and we are using a method <u>document.getElementById()</u> to manipulate the document/webpage.</i></b></p>
+	
+	<h4>writing in the element</h4>
+	<p>In this part we are going to cover how to display the value of an element.<br/> Assuming we have an input element that requires us to give in a number. We will then display the value stored in an existing element.</p>
+	<blockquote>&lt;input type="number" id="num" /&gt; <br/> &lt;input type="submit" Onclick="output()" value="Submit" /&gt; <br/> &lt;div id="div1"&gt; &lt;/div&gt;</blockquote>
+	<p>we created an empty element, 'div' (element representing a <b>division</b> of a page. This is where we will display the program's output.</p>
+	<blockquote> function output() <br/> { <br/> <blockquote> var num = document.getElementById('num').value; <br/> var div = document.getElementById('div1'); <br/> div.innerHTML = num;</blockquote>}</blockquote>
+	<p>The above code will display an input area and a submit button. Once the user has entered a number and clicked the submit button, the program will go through the buttons's attribute and come across an event that triggers a function 'output()'. The program will then execute the function. <br/> we have grabbed the value of the input and stored it in a variable, 'num'. Likewise, we a have stored the empty divsion('div') in a variable, 'div'. <br/>Notice that once we grabbed the input, we placed a <b>.value</b> after the <b>document.getElementById()</b> method but we did not do the same. This is because, what the input is recieves from the user is treated a value whereas the content of the div will be dynamically placed in the Document, hence we will edit its HTML.To do this, we use a <b>.innerHTML</b> suffix on the method, which is then  given the value of the variable, 'num'</p>
+	<button onclick="hideht()"  class="bt4" &nbsp;<span id="arrow3"> &uarr; </span>>Hide</button>
+	<!-------   			----****---- 			-->
+</section>
+<h3 Onclick="showdomtree()" id="hd4">The DOM tree</h3>
+<section id="domTree" style="display: none;">
+			
+		<p>As we said earlier, theDOM is an object-oriented reperesention of the web page which can be modified with a scripting langauge such as JavaScript. The DOM consists of <b>nodes</b> which is simply an HTML element. <br/> With this, the Dom is like a 'tree structure' that represents carries all HTML elements.</p>
+		<p>The document acts as the <b>root</b> to the nodes. </p>
+		<p><em>Let's take an example of a skeletal view of a web page. <br/> ie. </em></p>
+		<blockquote> &lt;html&gt; <blockquote> &lt;head&gt; <br/> &lt;/head&gt; <br/>&lt;body&gt; <br/> &lt;/body&gt;</blockquote>&lt;/html&gt;</blockquote>
+		<span>The above code represnts a full web page. The web page is the root and has nodes. <br/> HTML is a node which holds two other nodes, head and body. <br/> In this case, HTML is known as the <b>Parent node</b>. The head and body are under html hence they are <b>children of</b> html. <br/> So it is right to say<em> Html is a parent of head and head is a child of html.</em></span>
+		 <p>Lets apply this in a list.</p>
+		<blockquote> &lt;ol id="list"&gt; <blockquote>&lt;li&gt; first item &lt;/li&gt; <br/> &lt;li&gt; second item &lt;/li&gt; <br/> &lt;li&gt; third item &lt;/li&gt;</blockquote>&lt;/ol&gt;</blockquote>
+		<p>In the example above, 'ol' is the parent node of the three list items. The list items can be termed as children of 'ol' element.</p>
+		<p>We can manipulate the tree using javascript inbiult methods. <br/> <em>Let's grab and store the parent node in a variable, 'par';</em></p>
+		<blockquote> var par = document.getElementById('list');</blockquote>
+		<em> We just stored the parent element/node together with its children, but we are still on the top level of the parent node. To access the first child node of 'ol';</em>
+		<blockquote>par.children[0];</blockquote>
+		<em>Every node has a property, 'children' which is a pointer to an array-like structure containing the nodes. Just like we index array elements, child elements are indexed the same way( starting '0'). Therefore the second child of 'ol', will be accessed as follows; </em>
+		<blockquote>par.children[1];</blockquote>
+		<p>Each node has a <b>firstChild</b> an <b>lastchild</b> property. <br/> <em>ie.</em></p>
+		<blockquote> par.firstChild.innerHTML;</blockquote>
+		<em>will rerurn the value of the first element</em>
+		<blockquote> par.lastChild.innerHTML;</blockquote>
+		<em>will rerurn the value of the last element</em>
+
+		<h4>Modifying the tree</h4>
+		<p>Each and every node has the following methods;</p>
+		<ol>
+			<li>createElement()</li>
+			<p>This method creates a new element/node. since we are creating a new element on the document, we use the document as an object; <br/><em>ie.</em></p>
+			<blockquote> var newEl= document.createElement('li');</blockquote>
+			<em>we created a new list element ('li') and stored it in a variable 'newEl'.</em>
+			
+			<li>appendchild()</li>
+			<p>adds a child/node to the tree of children and makes its the last child/ it adds at the end of the list.</p>
+			<em>Let's append the new element we created earlier to our list;</em>
+			<blockquote> par.appendChild(newEl);</blockquote>
+			
+			<li>removechild()</li>
+			<p>this method removes a node from the tree.</p>
+			<em>Let's assume we stored the second node in a variable, 'sec' and we want to remove it from the tree.<br/> ie.</em>
+			<blockquote> var sec = par.children[1]; <br/> par.removeChild(sec);</blockquote>
+</ol>
+<br/>
+<button onclick="hidedomtree()"  class="bt5">hide &nbsp;<span id="arrow4"> &uarr; </span></button>
+</section>
+<h3 onclick="showcobj()" id="hd5">Classes and Objects</h3>
+<section id="cObj" style="display: none;">
+		
+		<p>Classes are just special function. a class contains two components; Class declarations and class expressions. A class defines an object. </p>
+		<blockquote> class person{}</blockquote>
+		<span> A person is an object. we have created a class that will define the object <u>person</u>.
+		</span>
+		<span> An object is simply a collection of data and code. An object, in OOP, represents a model of something real. <br/> The data represents the information that definesit while the code represents the behaviour of the object.</span>
+		<p>The class consists of code which can only execute when the object has been created from the class</p>
+		<blockquote> let p = new person(); </blockquote>
+		<em>the code above creates an object, <b>p</b> of the type person. so if we want to access a member of class person, we use the object, 'p' to access it. </em><blockquote> object.member;</blockquote>
+		<p>the body of the class is where class members are defined; methods and constructor.</p>
+		<p><b>A constructor</b> is an instance of a class. This is a special method of for creating and initializing an object created with a class. A class can only contain one constructor.</p>
+		<p>There are various ways of instanstiating a class;</p>
+		<h4><i>Static methods</i></h4>
+		<p>A static method defines elements with a given value <br/> <em>ie.</em></p>
+		<blockquote>class person{ <blockquote> constructor(){<blockquote>this.name = 'Ham';<br/> this.age = 20;</blockquote>}</blockquote>}</blockquote>
+		<h4><i>Dynamic methods</i></h4>
+		<p>Memebers of the class are dynamically assigned values by the program.<br/> <em>ie.</em></p>
+		<blockquote> </blockquote>
+		<blockquote>class person{ <blockquote> constructor(){<blockquote>this.name;<br/> this.age;</blockquote>}</blockquote>}</blockquote>
+		<p>We can store a value in any of the members. <br> <em>ie. Let's store '35' to the members age;</em></p>
+		<blockquote>p.age = '35';</blockquote>
+		<p>We can also store arrays in the constructor. <br/> <em>ie.</em> </p>
+		<blockquote> <blockquote>class person{ <blockquote> constructor(){<blockquote>this.friends = [ ];</blockquote>}</blockquote>}</blockquote>
+		</blockquote><em>Initially, the array has no items. Let's try to add some items</em>
+		<blockquote> p.friends.push('john')</blockquote>
+		<em>From our previous knowledge of editing Arrays, we use the push() method to add elements/items in the array.</em>
+
+		<h4><i>Passing the members as constructor paramenters.</i></h4>
+		<p>class members can aslo be passed as paramenters to the constructors. <br/> <em>ie.</em></p>
+		<blockquote><blockquote>class person{ <blockquote> constructor(name, age){<blockquote>this.name = name;<br/> this.age = age;</blockquote>}</blockquote>}</blockquote>
+		</blockquote>
+		<section id="example1">
+			<h4 align="center"><u>let's put all these in application.</u></h4>
+	<em>Lets assume we want to create a program that accepts a student's name and store his/her marks, then displays them when a button is clicked; <br/> ie.</em>
+		</section><blockquote>
+			&lt;html&gt;
+		<blockquote>&lt;head&gt;</blockquote>
+			<blockquote> &lt;script&gt;
+				<blockquote> class student{ <blockquote> constructor() { <blockquote>this.studentName;<br/> this.marks = [ ];</blockquote>}</blockquote>}<br/> let stud = new student();</blockquote>
+				<blockquote> function nameFun() { <blockquote> var name = document.getElementById('sName').value; <br/> stud.studentName = name;</blockquote>}</blockquote>
+				<blockquote>function submitMarks(){ <blockquote> var subj1 = document.getElementById('sub1').value; <br/> var subj2 = document.getElementById('sub2').value; <br/> stud.marks.push(subj1); <br/> stud.marks.push(subj2);</blockquote>}<br/></blockquote>
+				<blockquote> function show() { <blockquote> var sp = document.getElementById('sp1'); <br/> var allMarks = stud.marks.toString();<br/> var name = stud.studentName;<br/> sp.innerHTML = name + allMarks;</blockquote>}</blockquote>
+			
+			 &lt;/script&gt;
+			
+			
+			</blockquote>
+			<blockquote>&lt;/head&gt;<br/>
+			&lt;body&gt;
+			<blockquote> &lt;label&gt; Students Name: &lt;/label&gt; &lt;input type="text" id="sName" /&gt;  <br/> &lt;input type="submit" Onclick="nameFun()" /&gt;<br/> &lt;label&gt; Subject 1: &lt;/label&gt; &lt;input type="number" id="sub1" /&gt; <br/> &lt;label&gt; Subject 2: &lt;/label&gt; &lt;input type="number" id="sub2" /&gt; <br/> &lt;input type="submit" Onclick="submitMarks()" /&gt; <br/> &lt;br /&gt; <br/> &lt;button Onclick="show()"&gt; Show Student &lt;/button&gt; <br/> &lt;br/&gt; <br/> &lt;span id="sp1" &gt; &lt;/span&gt;</blockquote>
+			&lt;/body&gt;</blockquote>&lt;/html&gt;
+		</blockquote>
+	<p>The above program will display: </p>
+	<span>
+		<label> Students Name: </label> <input type="text" id="sName" />
+		<input type="submit" Onclick="nameFun()" />
+		<label> Subject 1: </label> <input type="number" id="sub1" />
+		<label> Subject 2: </label> <input type="number" id="sub2" />
+		<input type="submit" Onclick="submitMarks()" />
+		<br />
+		<button Onclick="show()"> Show Student </button>
+		<br/>
+		<span id="sp1"> </span>
+	</span>
+	<br/>
+	<p> Lets try to understand what happened: <br/> Looking at the HTML code, we created an input that recieves the students name followed by a button that submits the student's name to the function 'sName()'. <br/> We then created two inputs that recieve student's marks from two subjects followed by a submit button that submits the marks to a function, 'submitMarks()'. Below them is a button that read the acquires its output from the function, 'show()'. </p>
+	<p>Let's understand the javascript functions <br/> We first created a class, 'student' and instanstiated two member of the class ('studentName', an array, 'marks') in the constructor. we then created a object, 'stud' of type student. <br/> The <b>nameFun</b> function grabs the value of the student's name input and stores it in a variable. 'name'. the name is then assigned to the studentName variable we instanstiated before, which is accessed through the object, 'stud'. <br/> The <b>submitMarks()</b> function grabs the two subject marks inputs and stores them a variables, 'subj1' and 'subj2' respectively. The two variables are then pushed(added) to the array, marks[]. <br/> The <b>show()</b> function grabs an empty 'span' element from the document (HTML) and stores it in a variable, 'sp'. The 'allMarks' variable stores the array, marks[] as a string while the variable 'name' stores the value of studentName. <br/> the values are then assigned to the empty span using innerHTML. <br/> <em>Exciting, right!!</em></p>
+	
+	<h4>Functions within a class</h4>
+	<p> JS functions can also be placed inside the class. It is very important to note that <b>Functions written inside the class, DO NOT contain the prefix 'function'. <br/> <em>ie. lets use the program we just created before.</em></b></p>
+	<blockquote> class student{ <blockquote> constructor() { <blockquote>this.studentName;<br/> this.marks = [ ];</blockquote>}</blockquote><br/>
+				<blockquote> nameFun() { <blockquote> var name = document.getElementById('sName').value; <br/> this.studentName = name;</blockquote>}</blockquote>
+				<blockquote>submitMarks(){ <blockquote> var subj1 = document.getElementById('sub1').value; <br/> var subj2 = document.getElementById('sub2').value; <br/> this.marks.push(subj1); <br/> this.marks.push(subj2);</blockquote>}<br/></blockquote>
+				<blockquote> show() { <blockquote> var sp = document.getElementById('sp1'); <br/> var allMarks = this.marks.toString();<br/> var name = this.studentName;<br/> sp.innerHTML = name + allMarks;</blockquote>}</blockquote>
+			}<br/>
+			let stud = new student();
+</blockquote>
+<p>Notice how this time we accessed the members of the class differently using <span style="color:blue;"> this </span> keyword. This is because we are working within the class.</p>
+<p>This also changes how we call the function in the HTML code. we will now have to call the functions using the object. <br/> <em>ie.</em></p>
+<blockquote> &lt;input type="text" id="sName" /&gt;  <br/> &lt;input type="submit" Onclick="stud.nameFun()" /&gt;<br/>  &lt;input type="number" id="sub1" /&gt; <br/>  &lt;input type="number" id="sub2" /&gt; <br/> &lt;input type="submit" Onclick="stud.submitMarks()" /&gt; <br/> &lt;br /&gt; <br/> &lt;button Onclick="stud.show()"&gt; Show Student &lt;/button&gt; </blockquote>
+	<p>we used, our object, 'stud' to call the functions inside the class.</p>
+			
+			
+			<h4>Inheritence</h4>
+			<p>lets take an example, a child acquires certain traits from the parents. So whatever is in the parent, is also in the child. But the child can optionally add what is in it. <br/> A class can acquire acquire members from another class and can optionally add more members of its own. The class to which its members are acquired from another class is known as the <b>sub class</b> or <b>child class</b> or <b>derived class</b>, whereas the class to which its members are acquired by another class is known as the <b>super class</b> or <b>parent class</b></p>
+			<p><h4>Specialization and Generalization</h4> Let's take an example of system. A system contains other smaller systems of its own called sub systems. When analyzing a system as a whole, this is refferred to as <b>generalization</b> whereas one may decide to go into the finer details of the system and decide to work with single portion of the system/sub-system, this is referred to as <b>specialiaztion</b></p>
+			<p>Now back to the classes, while dealing with the super class, we are generalizing the program since we are working with the larger program as a whole. As we come down the inheritence tree, we are specializing, since we are dealing with single smaller parts of a larger class. <br/> <em>ie. we have different shapes and each of these shapes have more types of their own. for instance there are different types of triangles, (right-angled, isosceles and equilateral trianles).</em></p>
+			<span>lets create a super class;</span>
+	<blockquote> class shapes{ <blockquote> shape() { <blockquote> return'this is a shape';</blockquote>}</blockquote><br/></blockquote>
+	<p>now lets derive a class from the class 'shapes'. Like we saw before, there are different shapes, such as rectangles, traingle, circles ... So the class 'shapes' can have many sub-classes of different types of shapes. <br/> <em>ie.</em></p>
+	<blockquote> class rectangles{ <blockquote> rect extends shapes() { <blockquote> return'this is a rectangle';</blockquote>}</blockquote><br/></blockquote>
+	<blockquote> class circles{ <blockquote> circ extends shapes() { <blockquote> return 'this is a circle';</blockquote>}</blockquote><br/></blockquote>
+	<blockquote> class triangles{ <blockquote> tri extends shapes() { <blockquote> return 'this is a triangle';</blockquote>}</blockquote><br/></blockquote>
+	<p> we have three classes. but we can decide to go more deeper into one of them by creating a sub-class that derives its members from the class.<br/> <em>lets use our latter example, 'triangles'</em></p>
+	<blockquote> class rightAngled{ <blockquote> right extends triangles() { <blockquote> return 'this is a right-angled triangle';</blockquote>}</blockquote><br/></blockquote>
+	
+	<p>Lets try and understand this step by step: <br/> At first, we started with a class shapes that looks at all the shapes in general.(<i>remember generalization</i>). The 'class shapes' was a <u>super class</u> As we come down to look at these types of shapes, we are specializing. Then we come down to different types of a single shape. Lower classes are deriing members from the super class or rather the class above them and also optionally adding other members. In that case, we are using the keyword <span style="color: blue;"> extends</span> on the sub-class to show that the class is a derivative of the super class defined. <em>e.g <blockquote>class right extends triangles()</blockquote> this means the sub-class, 'right' is a derivative of class shapes.</em></p>
+	<p>But one may ask how these classes are connected or how they work. lets try to pu this in action;</p>
+	<em>ie. we want to define a shape which is a right-angled triangle. so we will need the statement returned in the super class, in the sub-class, rightAngled.</em>
+	<blockquote> class shapes{ <blockquote> shape() { <blockquote> return'this is a shape';</blockquote>}</blockquote><br/></blockquote>
+	<blockquote> class triangles{ <blockquote> tri extends shapes() { <blockquote>let sh = super.shape();<br/> 'return 'this is a triangle';</blockquote>}</blockquote><br/></blockquote>
+	<blockquote> class rightAngled{ <blockquote> right extends triangles() { <blockquote>let tr = super.tri();<br/> return sh + ', ' + tr + ', ' + 'this is a right-angled triangle';</blockquote>}</blockquote><br/></blockquote>
+	<p>In this case we included a super class in the sub class by assigning it to a constant variable. by placing it as a constant, it means that the members of the super class will be present and will nit be changed. the child class can only add members of its own.</p>
+	<p>Remember to access a member of a class, you must craete an object of its own type. <br/> <em>ie.</em></p>
+	<blockquote> let t = new rightAngled();</blockquote>
+	<em> to call the function in the rightAngled class;</em>
+	<blockquote> t.rightAngled();</blockquote>
+	<em>will return;</em>
+	<blockquote> this is a shape, this a triangle, this is a right-angled triangle</blockquote>
+	
+<button onclick="hidecobj()" class="bt6">hide &nbsp;<span id="arrow5"> &uarr; </span></button>
+</section>
+
+<!----------    				---***------				-->
+	<h3 Onclick="showquizes()" id="hd6">Tackling Questions</h3>
+<section id="quizes" style="display: none;">
+	<p>Programming question are very simple to tackle. some people melt when presented with these questions, well <em> been there</em>. <br/> when given a task to create a program;</p>
+	<p>First know what you want the program to do. What do you expect the program to do? What inputs does the program require? How many Outputs do you expect the program to give? How do you want the program to display the output? <br/> Let's try and understand these quetions, shall we... </p>
+	<h4><i>What do you expect the program to do?</i></h4>
+		<p> Most and almost all programming questions expect you to create a program that performs a certain function. it may be storing users input, displaying date, displaying users input, calculating values etc. Lets take an example of a calculator. a calculator itself is a program as it accepts input and gives output. You are expected to create a program that will accept these inputs and display the outputs. </p>
+	<h4><i>What inputs does the program require?</i></h4>
+	<p>Back to our example, a basic calculator can only accept a minimum of three inputs. <em>2 values and a character</em>. Most question will not give you the number of inputs to include in a program, but they will give the type of input and data the program will require. The programmer will have to proide a input that accepts a number value <br/><button onclick="showCalc()">Example</button>
+	<span style="display: none;" id="calc"> <input type="number" id="first" placeholder="Enter first value..." /> <input type="number" id="second" placeholder="Enter second value..."> <button onclick="calcEval()">Choose sign</button> <br/> the code for the above calculator is: <br/>
+		<blockquote>
+		<em style="color: red;">JS code</em><br/>
+			function calcEval()
+		{<blockquote>
+			var f = document.getElementById('first').value;<br/>
+			var s = document.getElementById('second').value;<br/>
+			var pr = prompt('Choose charcter: + , - , * , /');<br/>
+			if(pr == '+')
+			{<blockquote>
+				var result = Number(f) + Number(s);
+				alert('The result is: ' + result);</blockquote>
+			}<br/>
+			else if(pr == '-')
+			{<blockquote>
+				var result = Number(f) - Number(s);
+				alert('The result is: ' + result);</blockquote>
+			}<br/>
+			else if(pr == '*')
+			{<blockquote>
+				var result = Number(f) * Number(s);
+				alert('The result is: ' + result);</blockquote>
+			}<br/>
+			else if(pr == '/')
+			{<blockquote>
+				var result = Number(f) / Number(s);
+				alert('The result is: ' + result);</blockquote>
+			}</blockquote>
+		}<br/>
+		<em style="color: red;">HTML code</em><br/>
+		&lt;input type="number" id="first" placeholder="Enter first value..." /> <br/>&lt;input type="number" id="second" placeholder="Enter second value..."/> <br/>&lt;button onclick="calcEval()">Choose sign&lt;/button>
+		
+		</span></blockquote>
+	</span>
+	<br/> A login form will require user details, a username and a password. It is up to the programmer to provide input button to allow user to enter these information.</p>
+	<button onclick="loginshow()"> Example</button>
+	<br/>
+	<span id="showform" style="display: none;"> 
+		<input type="name" id="user" placeholder="enter username..." /><br/>
+		<input type="password" id="pwd" />
+		<br/>
+		<input type="submit" value="submit" onclick="submitDets()" /> 
+	
+	<blockquote>
+		<em style="color: red;">JS code</em><br/>
+			function submitDets()
+		{<blockquote>
+			var user = document.getElementById('user').value;<br/>
+			var pwd = document.getElementById('pwd').value;<br/>
+			
+			
+			if(user == 'user' && pwd == 123)<br/>
+			{<blockquote>
+				alert('successful login');</blockquote>
+			}<br/>
+			else{<blockquote>
+				alert('incorrect details');</blockquote>
+			}</blockquote>
+		}
+		
+	</blockquote>
+	<em style="color: red;">HTML code</em><br/>
+	<blockquote>
+		&lt;input type="name" id="user" placeholder="enter username..." /> &lt;br/>
+		&lt;input type="password" id="pwd" />&lt;br /&gt;
+		<br/>
+		&lt;input type="submit" value="submit" onclick="submitDets()" /> 
+	</blockquote>
+</span>
+<p><h4><i>How many Outputs do you expect the program to give?</i></h4> in the example of the calculator, we only expected one result, but in some cases, a user may expect more than one output. for example in the example of displaying student's name and marks.
+</p>
+<h4><i>How do you want the program to display the output?</i></h4>
+<p> Earlier, we look at various methods of displaying outputs in javascript. this is using alerts, writing the inner text of the elements, writing on the documents among others. <br/>In the case of writing on the document, the outputs is displayed on a new plain page. <br/> <button onclick="document.write('output is displayed here ' + '<br/>' +' refresh the page then navigate to your last point')">Try Here</button></p>
+
+<p>It is very important to note that when creating a program or writing code for a program, always start with the HTML code. it is important to first know what elements your program requires, how many inputs is your program going to recieve? how many buttons will your program have. note the each button has a function of either submiting inputs or displaying outputs. <br/> for instance the login form only confirms details to proceed to a next page or action. it contains one button that submites user details to the program. All buttons call javascript functions that execute the input or data given to the program. The program may either store data in variables or arrays or display it. <br/>Note that variables only store one single piece of data at a time. A variable, 'a' cannot store both '2' and 'jack' at the same time, rather the last value to be assigned to the variable becomes its new value. <br/> arrays on the other hand are used in storing multiple data.  </p>
+
+
+
+
+
+
+
+
+
+
+<button onclick="hidequizes()" class="bt6">hide &nbsp;<span id="arrow6"> &uarr; </span></button>
+</section>
+
+
+	<footer>@ Ricky_Mathenge 2019. <span style="color: cyan;"> Get my updates @ <a href="https://findricky.com/" target="_ blank">findricky.com</a></span></footer>	
+</body>
+</html>
